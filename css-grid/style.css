@@ -16,6 +16,12 @@ body {
   width: 100%;
   grid-template-columns: 2.5fr 2.5fr 1.25fr 1.25fr 2.5fr;
   grid-template-rows: 80px auto;
+  grid-template-areas:
+    "header1 header1 header1 header1 header2"
+    "banner  banner mondrian mondrian texto"
+    "rietveld vermelho mondrian mondrian texto"
+    "rietveld vermelho preto branco  texto";
+
   align-items: stretch;
   justify-items: stretch;
   height: 100vh;
@@ -27,7 +33,7 @@ body {
 
 .header-1 {
   background: white;
-  grid-column: 1/5;
+  grid-area: header1;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -85,7 +91,6 @@ body {
   display: block;
   background-color: #000;
   color: #ffff;
-  
 }
 
 .banner {
@@ -138,7 +143,7 @@ body {
 
 .banner-image img {
   width: 100%;
-  max-width: 100%;
+  max-width: 318px;
   height: auto;
 }
 
@@ -167,7 +172,7 @@ body {
 
 .rietveld img,
 .mondrian img {
-  max-width: 100%;
+  max-width: 270px;
   height: auto;
 }
 
